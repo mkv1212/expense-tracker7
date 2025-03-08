@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Expense & Saving Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Expense & Saving Tracker</h1>
+    </header>
+    <main class="container">
+        <section class="auth-section">
+            <h2>Sign Up</h2>
+            <form id="signup-form" class="auth-form">
+                <input type="text" placeholder="Username" required class="auth-input">
+                <input type="email" placeholder="Email" required class="auth-input">
+                <input type="password" placeholder="Password" required class="auth-input">
+                <button type="submit" class="auth-btn">Sign Up</button>
+            </form>
+            <div class="social-logos">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://twitter.com/" target="_blank">
+                    <img src="https://www.whitemad.pl/wp-content/uploads/2023/07/nowe-logo-twitter-1536x1536.jpeg" alt="X" class="social-icon">
+                </a>
+                <a href="https://www.discord.com" target="_blank">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/discord-2752210-2285027.png" alt="Discord" class="social-icon">
+                </a>
+            </div>
+            </div>
+
+            <p>Already registered? <a href="login.html" class="auth-link">Log In</a></p>
+            <button onclick="window.location.href='login.html'" class="auth-btn login-btn">Log In</button>
+        </section>
+    </main>
+    <div id="success-popup" class="popup success" style="display: none;">
+        <div class="popup-content">
+            <h3>Success</h3>
+            <p>Signup successful! Please log in.</p>
+            <button id="success-close-btn" class="popup-btn">Close</button>
+        </div>
+    </div>
+    <footer>
+        <p class="footer-text">© Copyright 2025 Expense & Saving Tracker™. All rights reserved.<br><span class="designer-name">Designed by Manoj Kumar Varshney</span></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

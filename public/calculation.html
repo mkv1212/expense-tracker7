@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculations - Expense & Saving Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Expense & Saving Tracker</h1>
+    </header>
+    <main class="container">
+        <section class="calc-section">
+            <h2>Financial Calculations (INR)</h2>
+            <div class="filters">
+                <select id="time-filter" class="styled-select">
+                    <option value="day">Day</option>
+                    <option value="week">Week</option>
+                    <option value="month" selected>Month</option>
+                    <option value="half-year">Half Year</option>
+                    <option value="year">Year</option>
+                </select>
+                <input type="date" id="date-picker" class="styled-input">
+            </div>
+            <div class="table-container">
+                <table class="calc-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Expense Item</th>
+                            <th>Expense (₹)</th>
+                            <th>Saving Option</th>
+                            <th>Saving (₹)</th>
+                            <th>Total (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Total Expense:</td>
+                            <td id="total-expense">₹0</td>
+                            <td>Total Saving:</td>
+                            <td id="total-saving">₹0</td>
+                            <td id="net-total">₹0</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <button id="export-btn" class="action-btn secondary-btn">Export to CSV</button>
+            <div class="nav-links">
+                <a href="index.html" class="nav-btn">Home</a>
+                <a href="tracker.html" class="nav-btn">Tracker</a>
+                <a href="graph.html" class="nav-btn">Graph</a>
+            </div>
+        </section>
+    </main>
+    <div id="login-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h3>Please Log In</h3>
+            <p>Access restricted. Log in to continue.</p>
+            <button id="login-redirect-btn" class="popup-btn">Go to Login</button>
+        </div>
+    </div>
+    <footer>
+        <p class="footer-text">© Copyright 2025 Expense & Saving Tracker™. All rights reserved.<br><span class="designer-name">Designed by Manoj Kumar Varshney</span></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

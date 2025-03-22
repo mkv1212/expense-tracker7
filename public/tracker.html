@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker - Expense & Saving Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <svg class="header-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="40" fill="#1e3c72"/>
+                <path d="M30 60 Q50 30 70 60 T90 60" fill="none" stroke="#ffd700" stroke-width="8"/>
+                <circle cx="50" cy="40" r="10" fill="#ffd700"/>
+                <text x="50" y="85" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">EST</text>
+            </svg>
+            <div class="header-text">
+                <h1 class="header-title">Expense & Saving Tracker</h1>
+                <p class="header-slogan">Plan Smart, Save More!</p>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="welcome-section">
+            <h2>Welcome to Your Financial Hub</h2>
+            <p>Track your expenses and savings effortlessly with our intuitive tools.</p>
+            <div class="nav-links">
+                <a href="index.html" class="nav-btn">Home</a>
+                <a href="tracker.html" class="nav-btn">Tracker</a>
+                <a href="calculation.html" class="nav-btn">Calculations</a>
+                <a href="graph.html" class="nav-btn">Graph</a>
+            </div>
+        </section>
+        <section class="tracker-section">
+            <h2>Add Your Financial Data</h2>
+            <div class="profile-section">
+                <img id="profile-avatar" class="profile-img" src="https://via.placeholder.com/40" alt="Profile Avatar">
+                <input type="file" id="avatar-upload" class="input-file" accept="image/*">
+                <button id="upload-avatar-btn" class="action-btn">Upload Avatar</button>
+            </div>
+            <form id="entry-form" class="input-form">
+                <h3>Expense Details</h3>
+                <select id="expense-item" class="styled-select">
+                    <option value="">Select Expense Item</option>
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Entertainment">Entertainment</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Custom">Custom</option>
+                </select>
+                <input type="text" id="expense-custom" class="custom-input" placeholder="Custom Expense Item" style="display: none;">
+                <input type="number" id="expense-amount" class="styled-input" placeholder="Expense Amount (₹)" min="0" step="0.01">
+                <input type="date" id="expense-date" class="styled-input">
+                <h3>Saving Details</h3>
+                <select id="saving-item" class="styled-select">
+                    <option value="">Select Saving Option</option>
+                    <option value="Bank">Bank</option>
+                    <option value="Investment">Investment</option>
+                    <option value="Emergency Fund">Emergency Fund</option>
+                    <option value="Custom">Custom</option>
+                </select>
+                <input type="text" id="saving-custom" class="custom-input" placeholder="Custom Saving Option" style="display: none;">
+                <input type="number" id="saving-amount" class="styled-input" placeholder="Saving Amount (₹)" min="0" step="0.01">
+                <input type="date" id="saving-date" class="styled-input">
+                <button type="submit" class="action-btn primary-btn">Add Entry</button>
+            </form>
+            <h2>Recent Entries</h2>
+            <div class="table-container">
+                <table class="tracker-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Expense Item</th>
+                            <th>Expense (₹)</th>
+                            <th>Saving Option</th>
+                            <th>Saving (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tracker-body">
+                        <!-- Recent entries will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <div id="login-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h3>Please Log In</h3>
+            <p>Access restricted. Please log in to continue.</p>
+            <button id="login-redirect-btn" class="action-btn primary-btn">Go to Login</button>
+        </div>
+    </div>
+    <div id="success-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h3>Notification</h3>
+            <p></p>
+            <button id="success-close-btn" class="action-btn">Close</button>
+        </div>
+    </div>
+    <footer>
+        <p class="footer-text">© Copyright 2025 Expense & Saving Tracker™. All rights reserved.</p>
+        <span class="footer-designer">Designed by Manoj Kumar Varshney</span>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

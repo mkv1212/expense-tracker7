@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense & Saving Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <svg class="header-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="40" fill="#1e3c72"/>
+                <path d="M30 60 Q50 30 70 60 T90 60" fill="none" stroke="#ffd700" stroke-width="8"/>
+                <circle cx="50" cy="40" r="10" fill="#ffd700"/>
+                <text x="50" y="85" font-size="20" fill="#ffd700" text-anchor="middle" font-weight="bold">EST</text>
+            </svg>
+            <div class="header-text">
+                <h1 class="header-title">Expense & Saving Tracker</h1>
+                <p class="header-slogan">Plan Smart, Save More!</p>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="welcome-section">
+            <h2>Welcome to Your Financial Hub</h2>
+            <p>Track your expenses and savings effortlessly with our intuitive tools.</p>
+            <div class="nav-links">
+                <a href="signup.html" class="nav-btn">Sign Up</a>
+                <a href="login.html" class="nav-btn">Log In</a>
+                <a href="tracker.html" class="nav-btn">Tracker</a>
+                <a href="calculation.html" class="nav-btn">Calculations</a>
+                <a href="graph.html" class="nav-btn">Graph</a>
+            </div>
+        </section>
+    </main>
+    <div id="login-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h3>Please Log In</h3>
+            <p>Access restricted. Please log in to continue.</p>
+            <button id="login-redirect-btn" class="popup-btn">Go to Login</button>
+            <div class="popup-progress"></div>
+        </div>
+    </div>
+    <footer>
+        <p class="footer-text">© Copyright 2025 Expense & Saving Tracker™. All rights reserved.</p>
+        <p class="footer-links">
+            <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
+        </p>
+        <span class="footer-designer">Designed by Manoj Kumar Varshney</span>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
